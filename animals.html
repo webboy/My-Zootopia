@@ -34,184 +34,165 @@
         }
 
         .cards {
-          list-style: none;
-          margin: 0;
-          padding: 0;
+            list-style-type: none;
+            padding: 0;
+            margin: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
         }
 
         .cards__item {
-          background-color: white;
-          border-radius: 0.25rem;
-          box-shadow: 0 20px 40px -14px rgba(0,0,0,0.25);
-          overflow: hidden;
-          padding: 1rem;
-          margin: 50px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            max-width: 300px;
+            flex: 1 1 calc(30% - 20px);
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
         }
 
         .card__title {
-          color: @gray-dark;
-          font-size: 1.25rem;
-          font-weight: 300;
-          letter-spacing: 2px;
-          text-transform: uppercase;
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 10px;
         }
 
         .card__text {
-          flex: 1 1 auto;
-          font-size: 0.95rem;
-          line-height: 2;
-          margin-bottom: 1.25rem;
+            font-size: 1em;
+            color: #666;
+            margin: 0;
+        }
+
+        .card__list {
+            list-style-type: disc;
+            padding-left: 20px;
+            margin: 10px 0 0 0;
+        }
+
+        .card__list-item {
+            margin-bottom: 5px;
+            color: #444;
+        }
+
+        .card__list-item strong {
+            color: #000;
+        }
+
+        @media (max-width: 768px) {
+            .cards__item {
+                flex: 1 1 100%;
+            }
         }
         </style>
     </head>
     <body>
         <h1>My Animal Repository</h1>
         <ul class="cards">
-            <li class="cards__item">  <div class="card__title">American Foxhound</div>
+            <li class="cards__item">  <div class="card__title">Arctic Fox</div>
   <p class="card__text">
-      <strong>Diet:</strong> Omnivore<br/>
-      <strong>Location:</strong> North-America<br/>
-      <strong>Type:</strong> Hound<br/>
-      <strong>Lifespan:</strong> 10 to 12 years<br/>
-      <strong>Color:</strong> BlackWhiteTan<br/>
-      <strong>Distinctive Feature:</strong> Long legs and wide, flat ears<br/>
-  </p>
-</li><li class="cards__item">  <div class="card__title">Arctic Fox</div>
-  <p class="card__text">
-      <strong>Diet:</strong> Carnivore<br/>
-      <strong>Location:</strong> Eurasia<br/>
-      <strong>Type:</strong> Mammal<br/>
-      <strong>Lifespan:</strong> 7 - 10 years<br/>
-      <strong>Color:</strong> GreyBlackWhite<br/>
-      <strong>Distinctive Feature:</strong> Thick fur that changes colour with season<br/>
+    <ul class="card__list">
+      <li class="card__list-item">Diet: Carnivore</li>
+      <li class="card__list-item">Location: Eurasia</li>
+      <li class="card__list-item">Type: Mammal</li>
+      <li class="card__list-item">Lifespan: 7 - 10 years</li>
+      <li class="card__list-item">Color: GreyBlackWhite</li>
+      <li class="card__list-item">Distinctive Feature: Thick fur that changes colour with season</li>
+    </ul>
   </p>
 </li><li class="cards__item">  <div class="card__title">Cross Fox</div>
   <p class="card__text">
-      <strong>Diet:</strong> Carnivore<br/>
-      <strong>Location:</strong> North-America<br/>
-      <strong>Type:</strong> mammal<br/>
-      <strong>Lifespan:</strong> 10 to 15 years in captivity, seven years in the wild<br/>
-      <strong>Color:</strong> RedBlackSilver<br/>
+    <ul class="card__list">
+      <li class="card__list-item">Diet: Carnivore</li>
+      <li class="card__list-item">Location: North-America</li>
+      <li class="card__list-item">Type: mammal</li>
+      <li class="card__list-item">Lifespan: 10 to 15 years in captivity, seven years in the wild</li>
+      <li class="card__list-item">Color: RedBlackSilver</li>
+    </ul>
   </p>
 </li><li class="cards__item">  <div class="card__title">Darwin’s fox</div>
   <p class="card__text">
-      <strong>Diet:</strong> Omnivore<br/>
-      <strong>Location:</strong> South-America<br/>
-      <strong>Type:</strong> Mammal<br/>
-      <strong>Lifespan:</strong> Seven years<br/>
-      <strong>Color:</strong> GreyRedBlack<br/>
-  </p>
-</li><li class="cards__item">  <div class="card__title">English Foxhound</div>
-  <p class="card__text">
-      <strong>Diet:</strong> Omnivore<br/>
-      <strong>Location:</strong> Europe<br/>
-      <strong>Lifespan:</strong> 10 to 13 years<br/>
-      <strong>Color:</strong> BlackWhiteTanMulti-colored<br/>
+    <ul class="card__list">
+      <li class="card__list-item">Diet: Omnivore</li>
+      <li class="card__list-item">Location: South-America</li>
+      <li class="card__list-item">Type: Mammal</li>
+      <li class="card__list-item">Lifespan: Seven years</li>
+      <li class="card__list-item">Color: GreyRedBlack</li>
+    </ul>
   </p>
 </li><li class="cards__item">  <div class="card__title">Fennec Fox</div>
   <p class="card__text">
-      <strong>Diet:</strong> Omnivore<br/>
-      <strong>Location:</strong> Africa<br/>
-      <strong>Lifespan:</strong> 10 - 14 years<br/>
-      <strong>Color:</strong> WhiteCreamSandy<br/>
+    <ul class="card__list">
+      <li class="card__list-item">Diet: Omnivore</li>
+      <li class="card__list-item">Location: Africa</li>
+      <li class="card__list-item">Lifespan: 10 - 14 years</li>
+      <li class="card__list-item">Color: WhiteCreamSandy</li>
+    </ul>
   </p>
 </li><li class="cards__item">  <div class="card__title">Fox</div>
   <p class="card__text">
-      <strong>Diet:</strong> Carnivore<br/>
-      <strong>Location:</strong> Africa<br/>
-      <strong>Type:</strong> Mammal<br/>
-      <strong>Lifespan:</strong> 3 - 11 years<br/>
-      <strong>Color:</strong> BrownRedBlackTan<br/>
-      <strong>Distinctive Feature:</strong> Pointed ears and long bushy tail<br/>
-  </p>
-</li><li class="cards__item">  <div class="card__title">Fox Snakes</div>
-  <p class="card__text">
-      <strong>Diet:</strong> Carnivore<br/>
-      <strong>Location:</strong> North-America<br/>
-      <strong>Lifespan:</strong> approximately 20 years<br/>
-      <strong>Color:</strong> BrownGreyBeigeChestnut<br/>
-      <strong>Distinctive Feature:</strong> Strongly patterned alternating blotches down the length of their spine.<br/>
+    <ul class="card__list">
+      <li class="card__list-item">Diet: Carnivore</li>
+      <li class="card__list-item">Location: Africa</li>
+      <li class="card__list-item">Type: Mammal</li>
+      <li class="card__list-item">Lifespan: 3 - 11 years</li>
+      <li class="card__list-item">Color: BrownRedBlackTan</li>
+      <li class="card__list-item">Distinctive Feature: Pointed ears and long bushy tail</li>
+    </ul>
   </p>
 </li><li class="cards__item">  <div class="card__title">Fox Squirrel</div>
   <p class="card__text">
-      <strong>Diet:</strong> Omnivore<br/>
-      <strong>Location:</strong> Central-America<br/>
-      <strong>Type:</strong> rodent<br/>
-      <strong>Lifespan:</strong> 6-12.6 years<br/>
-      <strong>Color:</strong> BrownGrey-Brown<br/>
-  </p>
-</li><li class="cards__item">  <div class="card__title">Fox Terrier</div>
-  <p class="card__text">
-      <strong>Diet:</strong> Omnivore<br/>
-      <strong>Location:</strong> Europe<br/>
-      <strong>Lifespan:</strong> 14 years<br/>
-  </p>
-</li><li class="cards__item">  <div class="card__title">Golden-Crowned Flying Fox</div>
-  <p class="card__text">
-      <strong>Diet:</strong> Herbivore<br/>
-      <strong>Location:</strong> Asia<br/>
-      <strong>Lifespan:</strong> unknown<br/>
-      <strong>Color:</strong> BlackGold<br/>
+    <ul class="card__list">
+      <li class="card__list-item">Diet: Omnivore</li>
+      <li class="card__list-item">Location: Central-America</li>
+      <li class="card__list-item">Type: rodent</li>
+      <li class="card__list-item">Lifespan: 6-12.6 years</li>
+      <li class="card__list-item">Color: BrownGrey-Brown</li>
+    </ul>
   </p>
 </li><li class="cards__item">  <div class="card__title">Gray Fox</div>
   <p class="card__text">
-      <strong>Diet:</strong> Omnivore<br/>
-      <strong>Location:</strong> Central-America<br/>
-      <strong>Type:</strong> Mammal<br/>
-      <strong>Lifespan:</strong> 6-12 years<br/>
-      <strong>Color:</strong> GreyRedBlackWhite<br/>
+    <ul class="card__list">
+      <li class="card__list-item">Diet: Omnivore</li>
+      <li class="card__list-item">Location: Central-America</li>
+      <li class="card__list-item">Type: Mammal</li>
+      <li class="card__list-item">Lifespan: 6-12 years</li>
+      <li class="card__list-item">Color: GreyRedBlackWhite</li>
+    </ul>
   </p>
 </li><li class="cards__item">  <div class="card__title">Kit Fox</div>
   <p class="card__text">
-      <strong>Diet:</strong> Omnivore<br/>
-      <strong>Location:</strong> Central-America<br/>
-      <strong>Type:</strong> mammal<br/>
-      <strong>Lifespan:</strong> seven years in the wild. 12 years in captivity<br/>
-      <strong>Color:</strong> GreyYellowBlackWhite<br/>
+    <ul class="card__list">
+      <li class="card__list-item">Diet: Omnivore</li>
+      <li class="card__list-item">Location: Central-America</li>
+      <li class="card__list-item">Type: mammal</li>
+      <li class="card__list-item">Lifespan: seven years in the wild. 12 years in captivity</li>
+      <li class="card__list-item">Color: GreyYellowBlackWhite</li>
+    </ul>
   </p>
 </li><li class="cards__item">  <div class="card__title">Marble Fox</div>
   <p class="card__text">
-      <strong>Diet:</strong> Omnivore<br/>
-      <strong>Location:</strong> North-America<br/>
-      <strong>Type:</strong> Mammal<br/>
-      <strong>Lifespan:</strong> Up to 15 years<br/>
-      <strong>Color:</strong> BrownBlackWhite<br/>
-  </p>
-</li><li class="cards__item">  <div class="card__title">Red Fox</div>
-  <p class="card__text">
-      <strong>Diet:</strong> Omnivore<br/>
-      <strong>Location:</strong> Africa<br/>
-      <strong>Lifespan:</strong> 2-4 years in the wild, 10-12 in captivity<br/>
-      <strong>Color:</strong> BrownGreyRedBlackSilver<br/>
-  </p>
-</li><li class="cards__item">  <div class="card__title">Smooth Fox Terrier</div>
-  <p class="card__text">
-      <strong>Diet:</strong> Omnivore<br/>
-      <strong>Location:</strong> Europe<br/>
-      <strong>Lifespan:</strong> 12 – 15 years<br/>
-      <strong>Color:</strong> BrownBlackWhiteTan<br/>
+    <ul class="card__list">
+      <li class="card__list-item">Diet: Omnivore</li>
+      <li class="card__list-item">Location: North-America</li>
+      <li class="card__list-item">Type: Mammal</li>
+      <li class="card__list-item">Lifespan: Up to 15 years</li>
+      <li class="card__list-item">Color: BrownBlackWhite</li>
+    </ul>
   </p>
 </li><li class="cards__item">  <div class="card__title">Tibetan Fox</div>
   <p class="card__text">
-      <strong>Diet:</strong> Carnivore<br/>
-      <strong>Location:</strong> Asia<br/>
-      <strong>Type:</strong> Mammal<br/>
-      <strong>Lifespan:</strong> 8-10 years<br/>
-      <strong>Color:</strong> GreyTan<br/>
-  </p>
-</li><li class="cards__item">  <div class="card__title">Toy Fox Terrier</div>
-  <p class="card__text">
-      <strong>Diet:</strong> Omnivore<br/>
-      <strong>Location:</strong> North-America<br/>
-      <strong>Lifespan:</strong> 11-14 years<br/>
-      <strong>Color:</strong> BlackWhiteTanChocolate<br/>
-  </p>
-</li><li class="cards__item">  <div class="card__title">Wire Fox Terrier</div>
-  <p class="card__text">
-      <strong>Diet:</strong> Omnivore<br/>
-      <strong>Location:</strong> Europe<br/>
-      <strong>Lifespan:</strong> 13 – 14 years<br/>
-      <strong>Color:</strong> BlackWhiteTan<br/>
+    <ul class="card__list">
+      <li class="card__list-item">Diet: Carnivore</li>
+      <li class="card__list-item">Location: Asia</li>
+      <li class="card__list-item">Type: Mammal</li>
+      <li class="card__list-item">Lifespan: 8-10 years</li>
+      <li class="card__list-item">Color: GreyTan</li>
+    </ul>
   </p>
 </li>
         </ul>
