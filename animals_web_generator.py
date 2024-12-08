@@ -8,26 +8,25 @@ def load_data(file_path):
 
 
 def generate_animal_info(animals_data):
-    """Generates a string with animal information"""
-    info_list = []
+    """Generates a string with animal information in HTML"""
+    output = ""
     for animal in animals_data:
-        info = []
+        output += '<li class="cards__item">'
         if 'name' in animal:
-            info.append(f"Name: {animal['name']}")
+            output += f"Name: {animal['name']}<br/>\n"
 
         if 'characteristics' in animal and 'diet' in animal['characteristics']:
-            info.append(f"Diet: {animal['characteristics']['diet']}")
+            output += f"Diet: {animal['characteristics']['diet']}<br/>\n"
 
         if 'locations' in animal and len(animal['locations']) > 0:
-            info.append(f"Location: {animal['locations'][0]}")
+            output += f"Location: {animal['locations'][0]}<br/>\n"
 
         if 'characteristics' in animal and 'type' in animal['characteristics']:
-            info.append(f"Type: {animal['characteristics']['type']}")
+            output += f"Type: {animal['characteristics']['type']}<br/>\n"
 
-        if info:
-            info_list.append("\n".join(info))
+        output += '</li>'
 
-    return "\n\n".join(info_list)
+    return output
 
 
 def generate_html(template_path, output_path, animals_info):
