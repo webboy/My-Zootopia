@@ -25,6 +25,15 @@ def generate_animal_info(animals_data):
         if 'characteristics' in animal and 'type' in animal['characteristics']:
             output += f'      <strong>Type:</strong> {animal["characteristics"]["type"]}<br/>\n'
 
+        if 'characteristics' in animal and 'lifespan' in animal['characteristics']:
+            output += f'      <strong>Lifespan:</strong> {animal["characteristics"]["lifespan"]}<br/>\n'
+
+        if 'characteristics' in animal and 'color' in animal['characteristics']:
+            output += f'      <strong>Color:</strong> {animal["characteristics"]["color"]}<br/>\n'
+
+        if 'characteristics' in animal and 'distinctive_feature' in animal['characteristics']:
+            output += f'      <strong>Distinctive Feature:</strong> {animal["characteristics"]["distinctive_feature"]}<br/>\n'
+
         output += '  </p>\n'
         output += '</li>'
 
